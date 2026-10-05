@@ -2,7 +2,6 @@ import type { IconType } from "react-icons";
 
 import {
   SiAndroid,
-  SiAmazonaws,
   SiDocker,
   SiExpress,
   SiFirebase,
@@ -12,9 +11,8 @@ import {
   SiGitlab,
   SiJenkins,
   SiJavascript,
-  SiJava,
   SiLinux,
-  SiMicrosoftazure,
+
   SiMongodb,
   SiMysql,
   SiNginx,
@@ -89,7 +87,7 @@ export const skillGroups: SkillGroup[] = [
     skills: [
       {
         name: "Java",
-        icon: SiJava,
+       
       },
       {
         name: "Spring Boot",
@@ -119,7 +117,7 @@ export const skillGroups: SkillGroup[] = [
       },
       {
         name: "Java",
-        icon: SiJava,
+        
       },
       {
         name: "Firebase",
@@ -159,11 +157,11 @@ export const skillGroups: SkillGroup[] = [
       },
       {
         name: "AWS",
-        icon: SiAmazonaws,
+        
       },
       {
         name: "Azure",
-        icon: SiMicrosoftazure,
+        
       },
       {
         name: "Linux",

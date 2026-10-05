@@ -9,25 +9,10 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  {
-    number: "01",
-    title: "GoviMart",
-    category: "FULL STACK / E-COMMERCE",
-    description:
-      "An online marketplace designed to connect farmers with customers.",
-    stack: [
-      "React",
-      "Tailwind CSS",
-      "Laravel",
-      "MySQL",
-      "Stripe",
-    ],
-    href: "YOUR_REPOSITORY_URL",
-    image: "/projects/govimart.png",
-  },
+  
 
   {
-    number: "02",
+    number: "01",
     title: "Student API",
     category: "BACKEND / DEVOPS",
     description:

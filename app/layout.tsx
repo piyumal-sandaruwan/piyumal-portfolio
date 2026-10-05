@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
 import { Inter, JetBrains_Mono } from "next/font/google";
-// @ts-expect-error - Next.js resolves the global stylesheet via its runtime config
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
