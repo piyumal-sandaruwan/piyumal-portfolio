@@ -1,4 +1,4 @@
-# Piyumal Sandaruwan — Cyberpunk DevOps Portfolio
+# Piyumal Sandaruwan — Portfolio
 
 A production-minded Next.js portfolio with a darker cyberpunk + glassmorphism + DevOps aesthetic.
 
