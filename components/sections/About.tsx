@@ -92,7 +92,7 @@ export function About() {
                 development, deployment and infrastructure. I enjoy
                 understanding what happens beyond the application itself —
                 from source code and containers to networks, servers and
-                production environments.
+                production environments.hhhhhhh
               </p>
             </ScrollReveal>
 
