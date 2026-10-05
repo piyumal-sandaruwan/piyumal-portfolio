@@ -15,11 +15,11 @@ import {
   Network,
   Server,
 } from "lucide-react";
-
+import { Gitlab} from "lucide-react";
 import { Button } from "@/components/Button";
 import { Container as PageContainer } from "@/components/Container";
 
-const techStack = ["NEXT.JS", "DOCKER", "JENKINS", "AWS", "LINUX"];
+const techStack = ["NEXT.JS", "DOCKER", "JENKINS", "AWS","SONARQUBE","AZURE","LINUX","MERN"];
 
 const stats = [
   { value: "03+", label: "YEARS LEARNING" },
@@ -159,6 +159,9 @@ export function Hero() {
               <span className="text-zinc-700">/</span>
 
               <span className="text-cyan-400">NETWORKING</span>
+              <span className="text-zinc-700">/</span>
+
+              <span className="text-cyan-400">FULL STACK</span>
             </motion.div>
 
             {/* ===================================================
@@ -258,7 +261,18 @@ export function Hero() {
               </Button>
 
               <a
-                href="https://github.com/"
+  href="https://gitlab.com/piyumal-sandaruwan/"
+  target="_blank"
+  rel="noreferrer"
+  className="inline-flex h-9 items-center gap-2 rounded-md border border-white/10 px-3.5 font-mono text-[9px] tracking-[0.12em] text-zinc-300 transition-colors hover:border-cyan-400/40 hover:text-cyan-400"
+>
+  <Gitlab className="h-3.5 w-3.5" />
+  GITLAB
+  <ArrowUpRight className="h-3 w-3" />
+</a>
+
+               <a
+                href="https://github.com/piyumal-sandaruwan"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex h-9 items-center gap-2 rounded-md border border-white/10 px-3.5 font-mono text-[9px] tracking-[0.12em] text-zinc-300 transition-colors hover:border-cyan-400/40 hover:text-cyan-400"
@@ -268,8 +282,9 @@ export function Hero() {
                 <ArrowUpRight className="h-3 w-3" />
               </a>
 
+
               <a
-                href="https://linkedin.com/"
+                href="https://www.linkedin.com/in/piyumal-sandaruwan-0099793a9/"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex h-9 items-center gap-2 rounded-md border border-white/10 px-3.5 font-mono text-[9px] tracking-[0.12em] text-zinc-300 transition-colors hover:border-cyan-400/40 hover:text-cyan-400"

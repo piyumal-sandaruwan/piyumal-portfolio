@@ -18,7 +18,7 @@ export default function Home() {
       <Certifications />
       <Extracurricular />
       <DevOpsJourney />
-      <Education />
+      
       <Contact />
     </main>
   );
