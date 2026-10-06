@@ -16,16 +16,16 @@ env:
   CONTAINER_APP_NAME: portfolio-app
   RESOURCE_GROUP: rg-piyumal-portfolio
 
-  ACR_IDENTITY: /subscriptions/9c924381-a681-4751-9cd7-6bff706001eb/resourceGroups/rg-piyumal-portfolio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/piyumal-portfolio-acr-identity
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Get source code
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2. Authenticate GitHub Actions with Azure
       - name: Login to Azure
         uses: azure/login@v2
         with:
@@ -33,29 +33,25 @@ jobs:
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
+      # 3. Login to Azure Container Registry
       - name: Login to Azure Container Registry
         run: |
           az acr login --name ${{ env.ACR_NAME }}
 
+      # 4. Build Docker image
       - name: Build Docker image
         run: |
           docker build \
             -t ${{ env.ACR_LOGIN_SERVER }}/${{ env.IMAGE_NAME }}:${{ github.sha }} \
             .
 
+      # 5. Push Docker image to ACR
       - name: Push Docker image to ACR
         run: |
           docker push \
             ${{ env.ACR_LOGIN_SERVER }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
 
-      - name: Configure ACR for Container App
-        run: |
-          az containerapp registry set \
-            --name ${{ env.CONTAINER_APP_NAME }} \
-            --resource-group ${{ env.RESOURCE_GROUP }} \
-            --server ${{ env.ACR_LOGIN_SERVER }} \
-            --identity ${{ env.ACR_IDENTITY }}
-
+      # 6. Deploy the new image to Azure Container Apps
       - name: Deploy to Azure Container Apps
         run: |
           az containerapp update \
